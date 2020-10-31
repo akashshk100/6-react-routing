@@ -14,6 +14,9 @@ function App() {
   let CartWithRouter = withRouter(Cart)
 
   return (
+    
+    // <BrowserRouter basename="my-app"></BrowserRouter>     // for server deployment where we host our application at example.com/my-app
+
     <BrowserRouter>
       
       {/* <Route path="/" exact>
@@ -39,10 +42,6 @@ function App() {
       </header>
 
       <Switch>
-
-        {/* <Route path="/">
-          <h4> Default Route </h4>
-        </Route> */}                    // letting this route be the first will cause to display this route everytime, because it's path is sub-string for every browser url
 
         {/* { authorised ? (
           <Route path="/cart" render={() =>

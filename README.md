@@ -77,3 +77,14 @@ Now both the routes will lead to index component but that is still not the best 
         }
 
         export default withRouter(Home)
+
+12. NOTE: When running the application on the production server where we have hosted our application as example.com/my-app then your application might fail because the routes in this case should pre-pended with example.com/my-app but instead they are pre-pended with example.com/ as this is default behaviour. Therefore we need change the dafault behaviour of react-router. And that is done where we use our,
+        <BrowserRouter>
+                ...
+        </BrowserRouter>
+
+by changing the basename prop of this component to "/my-app" which is by default "/" as shown below,
+
+        <BrowserRouter basename="/my-app">
+                ...
+        </BrowserRouter>
